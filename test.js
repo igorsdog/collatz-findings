@@ -1,5 +1,5 @@
 const getRepetitivePowerOfTwo = require('./power-formula')
-const findAmountOfStepsForNToReachItselfOrLower = require('./collatz-dropping-time')
+const getDroppingTime = require('./collatz-dropping-time')
 
 /** 
  * @param startWithN BigInt
@@ -14,9 +14,9 @@ const testRepetitivePowerOfTwo = (startWithN, testAmountOfNs, testDepth) => {
   let errorsAmount = 0
 
   for (let n = startWithN; n <= testUpToNs; n++) {
-    // Calculating the amount of steps for N so it reaches itself or a lower number
-    const steps = findAmountOfStepsForNToReachItselfOrLower(n)
-    // Getting the power of two, so we can add a power of 2 to N a number of times and test for the same amount of steps
+    // Calculating the dropping time for N so it reaches itself or a lower number
+    const steps = getDroppingTime(n)
+    // Getting the power of two, so we can add a power of 2 to N a number of times and test for the same dropping time
     const repetitivePowerOfTwo = getRepetitivePowerOfTwo(steps)
 
     let nextN = n
@@ -26,7 +26,7 @@ const testRepetitivePowerOfTwo = (startWithN, testAmountOfNs, testDepth) => {
       // Adding a power of 2
       nextN += BigInt(Math.pow(2, repetitivePowerOfTwo))
       // Getting the amount of steps for the new N
-      const stepsForNextN = findAmountOfStepsForNToReachItselfOrLower(nextN)
+      const stepsForNextN = getDroppingTime(nextN)
 
       // If steps do not match, yield an error
       if (steps !== stepsForNextN) {

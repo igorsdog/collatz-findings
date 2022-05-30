@@ -6,4 +6,4 @@
  * @param steps Number, natural number
  * @returns Number, power of two
  */
- module.exports = steps => steps - Math.ceil(steps * 53 / 137) + 1
+ module.exports = steps => steps - Math.ceil(steps * (1 - Math.log(3) / Math.log(6))) + 1

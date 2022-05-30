@@ -6,7 +6,7 @@ Example: C(11) = C(11 + 2^5) = C(11 + 2 * 2^5) = C(11 + 3 * 2^5) and so on.
 
 # Formula
 
-`C(n) = C(n + k * 2^(C(n) - ⌈C(n) * 53 / 137⌉ + 1))` where `k` is any whole number that satisfies that the parameter or C is a natural number.
+`C(n) = C(n + k * 2^(C(n) - ⌈C(n) * (1 - log(3) / log(6))⌉ + 1))` where `k` is any whole number that satisfies that the parameter or C is a natural number.
 
 This formula allows to get infinitely many other numbers that have the same dropping time as `n` **without bruteforce**.
 
