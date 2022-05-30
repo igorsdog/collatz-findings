@@ -1,5 +1,5 @@
 const getRepetitivePowerOfTwo = require('./power-formula')
-const findAmountOfStepsForNToReachItselfOrLower = require('./collatz-formula')
+const findAmountOfStepsForNToReachItselfOrLower = require('./collatz-dropping-time')
 
 /** 
  * @param startWithN BigInt

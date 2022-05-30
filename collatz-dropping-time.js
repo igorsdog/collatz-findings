@@ -1,7 +1,6 @@
 
 /**
- * Finds amount of Collatz Conjecture steps for N
- * so N becomes less than itself (or equal to itself if N=1).
+ * Finds Collatz Conjecture dropping time for N.
  * 
  * @param n BigInt, natural number
  * @returns Number, natural number, amount of steps

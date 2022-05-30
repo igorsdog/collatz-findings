@@ -1,7 +1,7 @@
 /**
- * Finds a power of two for a given amount of steps S(n)
+ * Finds a power of two for a given dropping time
  * so any amount of 2 in that power can be added to (or subtracted from) N,
- * and the steps S(m) for the new number will be the same (conjecture).
+ * so the dropping time for the new number will be the same as for N (conjecture).
  * 
  * @param steps Number, natural number
  * @returns Number, power of two

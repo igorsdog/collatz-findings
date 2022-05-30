@@ -1,42 +1,42 @@
 # Conjecture
 
-For a given amount of Collatz Conjecture steps that require a number to get a lower number or itself, there is infinite amount of numbers `n + k * 2^w` that require the same amount of steps.
+For a given Collatz Conjecture dropping time `C(n)` for `n`, there is infinite amount of numbers `n + k * 2^w` that have the same dropping time.
 
-Example: S(11) = S(11 + 2^5) = S(11 + 2 * 2^5) = S(11 + 3 * 2^5) and so on.
+Example: C(11) = C(11 + 2^5) = C(11 + 2 * 2^5) = C(11 + 3 * 2^5) and so on.
 
 # Formula
 
-`S(n) = S(n + k * 2^(S(n) - ⌈S(n) * 53 / 137⌉ + 1))` where `k` is any whole number that satisfies that the parameter or S is a natural number.
+`C(n) = C(n + k * 2^(C(n) - ⌈C(n) * 53 / 137⌉ + 1))` where `k` is any whole number that satisfies that the parameter or S is a natural number.
 
-This formula allows to get infinitely many other numbers that will require the same amount of steps (`S(n)`) as `n` **without bruteforce**.
+This formula allows to get infinitely many other numbers that have the same dropping time as `n` **without bruteforce**.
 
-*Note: This formula does not provide all numbers for the given amount of steps, but a subset of number that repeat with the frequency of 2^k only.*
+*Note: This formula does not provide all numbers for the given dropping time, but a subset of number that repeat with the frequency of 2^k only.*
 
 *Note: This formula is not proven, but is a result of observations.*
 
 # Example
 
-n = 11, S(11) = 8.
+n = 11, C(11) = 8.
 
 ```
-S(n) = S(n + k * 2^(S(n) - ⌈S(n) * 53 / 137⌉ + 1))
-S(11) = S(11 + k * 2^(S(11) - ⌈S(11) * 53 / 137⌉ + 1))
-8 = S(11 + k * 2^(8 - ⌈8 * 53 / 137⌉ + 1))
+C(n) = C(n + k * 2^(C(n) - ⌈C(n) * 53 / 137⌉ + 1))
+C(11) = C(11 + k * 2^(C(11) - ⌈C(11) * 53 / 137⌉ + 1))
+8 = C(11 + k * 2^(8 - ⌈8 * 53 / 137⌉ + 1))
 ```
 
 Let's test k = 3.
 
 ```
-8 = S(11 + 3 * 2^(8 - ⌈8 * 53 / 137⌉ + 1))
-8 = S(11 + 3 * 2^(8 - ⌈~3.094890510948905⌉ + 1))
-8 = S(11 + 3 * 2^(8 - 4 + 1))
-8 = S(11 + 3 * 2^5)
-8 = S(11 + 3 * 32)
-8 = S(11 + 96)
-8 = S(107)
+8 = C(11 + 3 * 2^(8 - ⌈8 * 53 / 137⌉ + 1))
+8 = C(11 + 3 * 2^(8 - ⌈~3.094890510948905⌉ + 1))
+8 = C(11 + 3 * 2^(8 - 4 + 1))
+8 = C(11 + 3 * 2^5)
+8 = C(11 + 3 * 32)
+8 = C(11 + 96)
+8 = C(107)
 ```
 
-S(107) = 8.
+C(107) = 8.
 
 # Tests
 ```
@@ -55,11 +55,11 @@ Try to change `53 / 137` in the formula to `54 / 137`, for example.
 
 # Annex
 
-## What is S(n)?
+## What is C(n)?
 
 Given: n = 11.
 
-Executing S(11):
+Executing C(11):
 
 ```
 1. 11 is odd  -> 11 * 3 + 1 = 34
@@ -74,5 +74,5 @@ Executing S(11):
 
 Terminate: 10 is less or equal to 11. Took 8 steps to accomplish.
 
-S(11) = 8.
+C(11) = 8.
 
