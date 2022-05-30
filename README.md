@@ -10,6 +10,8 @@ Example: C(11) = C(11 + 2^5) = C(11 + 2 * 2^5) = C(11 + 3 * 2^5) and so on.
 
 This formula allows to get infinitely many other numbers that have the same dropping time as `n` **without bruteforce**.
 
+`another_n_with_same_C = n + k * 2^(C(n) - ⌈C(n) * (1 - log(3) / log(6))⌉ + 1)`
+
 *Note: This formula does not provide all numbers for the given dropping time, but a subset of number that repeat with the frequency of 2^k only.*
 
 *Note: This formula is not proven, but is a result of observations.*
