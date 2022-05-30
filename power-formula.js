@@ -6,4 +6,6 @@
  * @param steps Number, natural number
  * @returns Number, power of two
  */
- module.exports = steps => steps - Math.ceil(steps * (1 - Math.log(3) / Math.log(6))) + 1
+const LOG3_DIV_LOG6 = Math.log(3) / Math.log(6)
+
+module.exports = steps => steps - Math.ceil(steps * (1 - LOG3_DIV_LOG6)) + 1

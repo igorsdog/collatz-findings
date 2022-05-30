@@ -48,6 +48,6 @@ const testRepetitivePowerOfTwo = (startWithN, testAmountOfNs, testDepth) => {
   return testPassed
 }
 
-testRepetitivePowerOfTwo(BigInt(1), BigInt(100000), 1000)
-testRepetitivePowerOfTwo(BigInt(1), BigInt(10000000), 10)
-testRepetitivePowerOfTwo(BigInt(1000000000000000000000000000000000), BigInt(1000000), 10)
+testRepetitivePowerOfTwo(1n, 100000n, 1000)
+testRepetitivePowerOfTwo(1n, 10000000n, 10)
+testRepetitivePowerOfTwo(1000000000000000000000000000000000n, 1000000n, 10)

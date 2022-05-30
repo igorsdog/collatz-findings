@@ -12,10 +12,10 @@ module.exports = n => {
   while (true) {
     steps++
 
-    if (currentN % BigInt(2) === BigInt(0)) {
-      currentN = currentN / BigInt(2)
+    if (currentN % 2n === 0n) {
+      currentN = currentN / 2n
     } else {
-      currentN = BigInt(3) * currentN + BigInt(1)
+      currentN = 3n * currentN + 1n
     }
 
     if (currentN <= n) {
