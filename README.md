@@ -36,7 +36,7 @@ Let's test k = 3.
 8 = C(107)
 ```
 
-C(107) = 8.
+Another number that has a dropping time of 8 is 107.
 
 # Tests
 ```
