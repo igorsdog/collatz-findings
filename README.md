@@ -49,10 +49,6 @@ The following setups are tested:
 - `n` = `1 ... 100.000.000]` for `k` = `[1 ... 10]`.
 - `n` = `1.000.000.000.000.000.000.000.000.000.000.000, ... 1.000.000.000.000.000.000.000.000.001.000.000]` for `k` = `[1 ... 10]`.
 
-## Testing false positives
-
-Try to change `53 / 137` in the formula to `54 / 137`, for example.
-
 # Annex
 
 ## What is C(n)?
